@@ -3,4 +3,4 @@
 python /www/scripts/tag.py $PROXY_URL
 
 
-nginx -g "daemon off;"
+exec nginx -g "daemon off;"
