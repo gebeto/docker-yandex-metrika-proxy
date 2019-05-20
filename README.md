@@ -12,3 +12,12 @@ This command run proxy and generate `tag.js` file with metrika `http://localhost
  	-e "PROXY_URL=http://localhost" \
  	-v -it gebeto/yandex-metrika-proxy
 ```
+
+## Purpose
+I am from Ukraine and Yandex are blocked in this country. Yandex's solution (Alternative CDN) are not help me to fix my problem, because this solution send metrika data to `mc.yandex.ru` but it is blocked😅. So I create this proxy with `nginx` (`proxy_pass`) to setup it on your host and send all metrika data to it, additionally I create script on `python` that replace `mc.yandex.ru` host to host of your server.
+
+Old metrika logic was:
+ > USER -> YANDEX_METRIKA
+
+New is:
+ > USER -> YOUR_HOST -> YANDEX_METRIKA
